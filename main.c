@@ -44,7 +44,7 @@ int main(int argc, char **argv)
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(TARGET_PORT);
     serverAddrLen = sizeof(serverAddr);
-    // Открываем UDP-сокет
+    // Открываем сырой IP-сокет
     int udpOutFD = socket (AF_INET, SOCK_RAW, IPPROTO_RAW);
     if(udpOutFD == -1)
     {
